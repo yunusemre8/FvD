@@ -76,7 +76,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <img src="./readme-images/bdschets3.png" width="375px" alt="breakdown van een dynamisch deel">
 
   ### wellicht nog een dynamisch deel (bijv filter): 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van nog een dynamisch deel">
+  <img src="readme-images/" width="375px" alt="breakdown van nog een dynamisch deel">
 
 </details>
 
@@ -90,26 +90,27 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor 1<sup>e</sup> voortgang</summary>
 
   ### Stand van zaken
-  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
 
+  Het maken van structuur van de eerste pagina ging goed. Ik kon wel mijn vragen 
+  en ik heb goed feedback gekregen. 
 
   ### Agenda voor meeting
   samen met je groepje opstellen
 
   | student 1      | student 2          | student 3    | student 4        |
   | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
+  | Gebruik articles voor kaart achtige dingen op je site, dit hoeft geen lijst te zijn.  | Kies een hamburgermenu van de originele website en maak dat na | en ik dit    | en dan ik dat    |
+  | Maak gebruik van het "details" element in html voor uitklapbare element.  | dit als er tijd is | nog een punt | dit wil ik zeker |
+  | En schrijf eerst al je HTML af voordat je met CSS begint. | ...                | ...          | ...              |
 
 
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
+  - details, summary elementen gebruiken voor uitklapbare stukjes
+  - eerst de html van beide paginas afmaken
+  - articles gebruiken
+  - een hamburgermenu kiezen van de originele website
 
 </details>
 
@@ -123,25 +124,25 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor 2<sup>e</sup> voortgang</summary>
 
   ### Stand van zaken
-  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
-
-
+  Ik heb de feedback van vorige week goed uitgewerkt en probleem gehad met een carousel.
+  Het duurde wel een beetje maar eindelijk opgelost.
   ### Agenda voor meeting
   samen met je groepje opstellen
 
   | student 1      | student 2          | student 3    | student 4        |
   | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
+  | Gebruik max-width voor carousel afbeeldingen zodat een klein stukje van de 
+  volgende afbeelding zichtbaar is aan de kant van de pagina  | en dit             | en ik dit    | en dan ik dat    |
+  | probeer om light/dark mode te maken met custom properties voor surface plane | dit als er tijd is | nog een punt | dit wil ik zeker |
   | ...            | ...                | ...          | ...              |
 
 
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
+  - Aanpassingen met carousel
+  - Op een juiste manier de elementen van HTML roepen in CSS
+  - Bedenken over de light/dark mode
 - ...
 
 </details>
@@ -203,20 +204,23 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor eindgesprek</summary>
 
   ### Je uitkomst - karakteristiek screenshots:
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="uitomst opdracht 1">
+  <img src="readme-images/eindgesprek screenshots_1.png" width="375px" alt="uitomst opdracht 1">
+
+  <img src="readme-images/eindgesprek screenshots_5.pngjpg" width="375px" alt="uitomst opdracht 1">
 
 
   ### Dit ging goed/Heb ik geleerd: 
-  Korte omschrijving met plaatjes
+  Ik heb een nieuwe interactie geleerd, namelijk details en summary.
+  En nog heb ik met custom properties light/dark mode gedaan.
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="top">
+  <img src="readme-images/eindgesprek screenshots_4.png" width="375px" alt="top">
+  <img src="readme-images/eindgesprek screenshots_2.png.png" width="375px" alt="top">
 
 
   ### Dit was lastig/Is niet gelukt:
-  Korte omschrijving met plaatjes
+  Carousel in carousel was echt moeilijk. Het is me wel gelukt maar ik heb ook hulp van ChatGPT gebruikt.
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="bummer">
-</details>
+  <img src="readme-images/eindgesprek screenshots_3.png" width="375px" alt="uitomst opdracht 1">
 
 
 
@@ -231,8 +235,8 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   Nb. ChatGpT en andere AI horen er ook bij.
   Nb. Vermeld de bronnen ook in je code.
 
-  1. bron 1
-  2. bron 2
+  1. Details en summary tutorial https://www.youtube.com/watch?v=Vzj3jSUbMtI, https://www.youtube.com/watch?v=idoaw75xjhU&t=547s
+  2. ChatGPT link: https://chatgpt.com/share/68dba57a-2cf8-8005-9829-376821b136bb
   3. ...
 
 </details>

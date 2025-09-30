@@ -15,11 +15,17 @@
 /*********************/
 :root {
 	/* startje */
-	--color-text-1: #0a0a0a;
-	--color-text-2: #2b2a29;
-	--color-background-darkgray: #1F1F1F;
-	--main-darkgray: #131212;
-	--color-background-black: #141212;
+	--tekst-color-1: #0a0a0a;
+	--tekst-color-2: #fff;
+
+	--bg-details: #131212;
+	--color-background: #1F1F1F;
+
+	--color-wwa-carousel: #111;
+	--background-color-2: #dbd9d6;
+
+	--footer-color: #fff;
+
 
 	--font-RiotSans: 'RiotSans';
 	--font-InterSemiBold: 'InterSemiBold';
@@ -28,16 +34,19 @@
 	
 }
 
-/* .test {
-	background-color: transparent;
-} */
+body.light {
+	--tekst-color-1: #fff;
+	--tekst-color-2: #0a0a0a;
+	--color-wwa-carousel: #e7e6e3;
+	--bg-details: #00b1b5d6;
+	--footer-color: #111;
+	--color-background: #dbdbdb;
 
-
-
-
-main {
-	overflow: hidden;
 }
+
+
+
+
 
 @font-face {
 	font-family: 'RiotSans';
@@ -75,6 +84,51 @@ h3 {
 	font-style: normal;
 }
 
+ul {
+	list-style: none;
+	padding: 0;
+}
+
+
+p,
+a {
+	padding: 1rem;
+	display: block;
+}
+
+
+a {
+	text-decoration: none;
+}
+
+p {
+	font-family: "InterRegular";
+}
+
+
+h1 {
+	color: var(--tekst-color-2);
+	text-align: center;
+	font-weight: 700;
+}
+
+h2 {
+	font-weight: 700;
+	letter-spacing: -.03em;
+	font-size: 1.9rem;
+	color: var(--tekst-color-2);
+	text-align: center;
+}
+
+h3 {
+	color: var(--tekst-color-2);
+	text-align: center;
+}
+
+img {
+	max-width: 100%;
+}
+
 /* Header */
 header {
 	display: flex;
@@ -83,7 +137,7 @@ header {
 	position: fixed;
 	height: 5em;
 	width: 100%;
-	z-index: 2;
+	z-index: 20;
 	transition: background-color 0.3s ease;
 	background-color: transparent;
 }
@@ -128,7 +182,6 @@ header > ul {
 	grid-template-columns: repeat(20, 1fr);
 	list-style: none;
 	padding: 0em 0em 0em 1em;
-	/* background-color: var(--main-darkgray); */
 }
 
 header ul > li:nth-child(1) {
@@ -152,19 +205,19 @@ header button {
 	background: none;
 	border: none;
 	font-size: 1.5rem;
-	color: white;
+	color: var(--tekst-color-2);
 	cursor: pointer;
 }
 
 
-/* Navigation (hidden by default) */
+/* Hamburgermenu */
 header nav {
 	position: fixed;
 	top: 0;
 	left: 0;
 	height: 100%;
 	width: 100%;
-	background: #1f1f1f;
+	background: var(--color-background);
 	transform: translateX(100%);
 	transition: transform 0.3s ease;
 	padding: 1em;
@@ -188,6 +241,11 @@ nav button {
 
 nav ul li:nth-of-type(1) svg {
 	height: 2.5em;
+	fill: var(--tekst-color-1);
+}	
+
+nav ul li:nth-of-type(1) svg circle {
+	fill: var(--tekst-color-2);
 }	
 
 nav ul li:nth-of-type(2) svg {
@@ -202,7 +260,7 @@ header nav ul:nth-of-type(2) {
 }
 
 header nav ul:nth-of-type(2) li a {
-	color: white;
+	color: var(--tekst-color-2);
 	letter-spacing: .08em;
     margin: 0.3em 0;
 	padding-left: 1.2em;
@@ -226,7 +284,7 @@ header nav div {
 header nav div > button {
 	background-color: rgb(209, 54, 57);
 	width: 100%;
-	color: var(--color-text-1);
+	color: var(--tekst-color-1);
 	font-family: var(--font-MarkProBold);
 	font-size: .8rem;
 	letter-spacing: 0.1em;
@@ -237,7 +295,7 @@ header nav div > button {
 
 
 header nav div label {
-	box-shadow: inset 0 0 0 1px #f9f9f9;
+	box-shadow: inset 0 0 0 1px var(--tekst-color-2);
 	border-radius: 1.6rem;
 	width: 10em;
 	display: flex;
@@ -256,7 +314,7 @@ header nav div input {
 }
 
 header nav div input::placeholder{
-    color: white;
+    color: var(--tekst-color-2);
 }
 
 
@@ -268,58 +326,26 @@ video {
 	object-fit: cover;
 }
 
-section {
-	margin: 0;
-}
-
-ul {
-	list-style: none;
-	padding: 0;
-}
 
 
-a {
-	text-decoration: none;
-}
-
-p {
-	font-family: "InterRegular";
-}
-
-h1,
-h2,
-h3 {
-	color: white;
-	text-align: center;
-}
-
-h1 {
-	font-weight: 700;
-}
-
-
-h2 {
-	font-weight: 700;
-	letter-spacing: -.03em;
-	font-size: 1.9rem;
-}
-
-
-img {
-	max-width: 100%;
-}
-
+/* Nieuws section */
 
 section:nth-of-type(1) {
-	background-color: #0a0a0a;
+	background-color: var(--tekst-color-1);
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	padding-top: 2em;
 }
 
+section:nth-of-type(1) h1 {
+	padding-bottom: 1em;
+	letter-spacing: -.03em;
+	font-size: 1.938rem;
+}
+
 section:nth-of-type(1) button {
-	color: white;
+	color: var(--tekst-color-2);
 	border-style: none;
 	font-size: .813rem;
     border-radius: 0.6em;
@@ -329,7 +355,7 @@ section:nth-of-type(1) button {
     text-transform: uppercase;
     font-weight: 800;
 	align-items: center;
-	background-color: var(--color-background-darkgray);
+	background-color: var(--color-background);
 	margin: 2em 0em 4em 0em;
 }
 
@@ -345,6 +371,11 @@ section:nth-of-type(1) article:first-of-type h3 {
 	text-align: left;
 }
 
+section:nth-of-type(1) article:first-of-type img {
+	border-radius: 0.6em;
+	text-align: left;
+}
+
 
 section:nth-of-type(1) article:first-of-type p {
 	margin: 0;
@@ -352,28 +383,12 @@ section:nth-of-type(1) article:first-of-type p {
 }
 
 section:nth-of-type(1) article:not(:first-of-type) {
-	background-color: var(--color-background-darkgray);
+	background-color: var(--color-background);
 	margin: 0.5em 1em;
 	border-radius: 0.6em;
 	height: 8em;
 }
 
-
-/* @media(min-width: 600px) {
-	section:nth-of-type(1) article:nth-child(1) {
-		grid-column: 1/-1;
-	}
-} */
-
-/* section:nth-of-type(1) article div {
-	padding-top: 0.6em;
-	padding-left: 0.6em;
-} */
-
-/* section:nth-of-type(1) article a svg {
-	width: 20px;
-	height: 18px;
-} */
 
 section:nth-of-type(1) article:not(:first-of-type) {
 	height: 7em;
@@ -399,7 +414,6 @@ section:nth-of-type(1) article:not(:first-of-type) a h3 {
 	-webkit-line-clamp: 2;
 	-webkit-box-orient: vertical;
 	overflow: hidden;
-	/* text-overflow: ellipsis; */
 	text-align: left;
 	width: 80%;
 }
@@ -419,7 +433,7 @@ section:nth-of-type(1) article:not(:first-of-type) p, div, svg {
 
 
 section:nth-of-type(1) article:not(:first-of-type) div {
-	background: black;
+	background: var(--tekst-color-1);
 	border-radius: 50%;   
 	width: 24px;         
 	height: 24px;
@@ -456,17 +470,20 @@ section:nth-of-type(1) article p {
 	margin-left: 2.5em;
 }
 
+/* Games section */
+
 section:nth-of-type(2) {
 	margin: 0;
-	padding-top: 2em;
-	background-color: var(--color-background-darkgray);
+	background-color: var(--color-background);
 }
 
+section:nth-of-type(2) h2 {
+	padding: 2em 0 1em 0;
+}
 
 section:nth-of-type(2) article a {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
-	/* grid-template-rows: 1fr 1fr; */
 	align-items: center;
 	height: 100%;
 }
@@ -486,10 +503,11 @@ section:nth-of-type(2) article img:nth-child(2) {
 	margin: 0 auto;
 }
 
-/* carousel */
+/* Esports & Entertainment Carousel */
+
 section:nth-of-type(3) {
 	padding-bottom: 4em;
-	background-color: var(--color-background-darkgray);
+	background-color: var(--color-background);
 }
 
 section:nth-of-type(3) h2 {
@@ -518,14 +536,12 @@ section:nth-of-type(3) ul li img:nth-child(2) {
 }
 
 
-
 section:nth-of-type(3) ul {
 	display: flex;
 	overflow: auto;
 	scrollbar-width: none;
 	scroll-snap-type: x mandatory;
 	scroll-behavior: smooth;
-	scrollbar-color: #1F1F1F;
 	overscroll-behavior-x: contain;
 	padding: 1em;
 	scroll-marker-group: after;
@@ -563,32 +579,24 @@ section:nth-of-type(3) li img {
 }
 
 
-/* bolletjes van riot */
+/* Career section */
 
 section:nth-of-type(4) {
 	background-color: #EBEBEB;
 }
 
-section:nth-of-type(4) h2 {
-
-
-}
 
 section:nth-of-type(4) article{
-	/* background-color: #EBEBEB; */
 	padding: 0 1em 0;
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	grid-template-rows: 0.5fr 1fr;
 	grid-row-gap: 1.8em;
-
 }
 
 
 section:nth-of-type(4) h2 {
-	color: var(--color-text-1);
-	/* grid-column: 1/3; */
-	/* grid-row: 1 / 3; */
+	color: #0a0a0a;
 	padding: 1em 0;
 	text-align: center;
 }
@@ -609,15 +617,11 @@ section:nth-of-type(4) article h3 {
 
 section:nth-of-type(4) article button {
 	grid-column: 1/3;
-	/* grid-row: 4; */
 	border: #d1363a solid 0.5em;
 	border-radius: 1.2em;
 	background-color: #d1363a;
-	/* padding: 0.3em 0.9em; */
 	width: 100%;
 	height: 3em;
-	/* text-decoration: none; */
-	/* text-align: center; */
 	color: #e7e6e3;
 	font-family: 'InterSemiBold';
 	font-size: 1.25em;
@@ -626,7 +630,7 @@ section:nth-of-type(4) article button {
 
 section:nth-of-type(4) article a {
 	background-color: rgba(173, 172, 170, .2);
-	color: var(--color-text-1);
+	color: #0a0a0a;
 	font-family: 'InterSemiBold';
 	height: 2.125em;
 	font-size: 3.5rem;
@@ -653,18 +657,16 @@ section:nth-of-type(4) article a span {
     font-size: 1.125rem;
 }
 
-
-
-
+/* Footer */
 
 footer {
 	margin-top: -1em;
-	background-color: var(--color-background-darkgray);
+	background-color: var(--color-background);
 	transition: all .3s ease-out;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	color: white;
+	color: var(--footer-color);
 	font-size: .8rem;
 }
 
@@ -674,8 +676,7 @@ footer ul {
 }
 
 footer li {
-	/* margin-top: 0.3em; */
-	/* display: block; */
+	margin-top: 0.3em;
 	text-transform: uppercase;
 	font-family: var(--font-InterSemiBold);
 }
@@ -683,12 +684,13 @@ footer ul li a {
 	font-size: .8em;
 }
 
-footer ul > a {
+footer ul:nth-of-type(1) li:nth-of-type(1) a {
 	padding-top: 3em;
+	fill: var(--tekst-color-2);
 }
 
 footer a {
-	color: white;
+	color: var(--footer-color);
 	text-align: center;
     padding: 10px;
     letter-spacing: -.03em;
@@ -706,46 +708,50 @@ footer ul:nth-of-type(2) {
 footer ul:nth-of-type(2) li:nth-of-type(1) svg {
 	width: 16px;
 	height: 16px;
-	fill: white;
+	fill: var(--footer-color);
 }
 
 footer ul:nth-of-type(2) li:nth-of-type(2) svg {
 	width: 16px;
 	height: 16px;
-	fill: white;
+	fill: var(--footer-color);
 
 }
 
 footer ul:nth-of-type(2) li:nth-of-type(3) svg {
 	width: 16px;
 	height: 16px;
-	fill: white;
+	fill: var(--footer-color);
 
 }
 
 footer ul:nth-of-type(2) li:nth-of-type(4) svg {
 	width: 16px;
 	height: 16px;
-	fill: white;
+	fill: var(--footer-color);
 }
 
 footer ul:nth-of-type(2) li:nth-of-type(5) svg {
 	width: 9px;
 	height: 16px;
-	fill: white;
+	fill: var(--footer-color);
 }
 
 footer ul:nth-of-type(2) li:nth-of-type(6) svg {
 	width: 19px;
 	height: 13px;
-	fill: white;
+	fill: var(--footer-color);
 
 }
 
 /* WHO WE ARE PAGINA */
 
+/* Afbeelding en menu items section */
+
 .wwa section:nth-of-type(1) {
-	min-height: 535px;
+	min-height: 38em;
+	position: relative; 
+    overflow: hidden;
 }
 
 .wwa section:nth-of-type(1) img {
@@ -753,12 +759,14 @@ footer ul:nth-of-type(2) li:nth-of-type(6) svg {
 	position: relative;
 	height: 38em;
 	width: 100%;
+	position: absolute;
+    top: 0; 
 }
 
 .wwa section:nth-of-type(1) h1 {
-	color: white;
+	color: #fff;
 	position: absolute;
-    top: 26%;
+    top: 43%;
 	text-align: center;
 	font-size: 2.8em;
 	font-family: 'RiotSans';
@@ -767,9 +775,9 @@ footer ul:nth-of-type(2) li:nth-of-type(6) svg {
 }
 
 .wwa section:nth-of-type(1) p:nth-of-type(1) {
-	color: white;
+	color: #fff;
 	position: absolute;
-    top: 18.5%;
+    top: 30%;
 	text-align: center;
 	font-size: 1.25em;
 	letter-spacing: -.03em;
@@ -777,24 +785,21 @@ footer ul:nth-of-type(2) li:nth-of-type(6) svg {
 }
 
 .wwa section:nth-of-type(1) p:nth-of-type(2) {
-	color: white;
 	position: absolute;
-    top: 37%;
 	text-align: center;
-	letter-spacing: -.03em;
+	top: 60%;
     font-size: 1.2em;
-    line-height: 1.4em;
+	line-height: 1.4em;
+	color: #fff;
+	font-family: var(--font-InterRegular);
+    letter-spacing: -.03em;
 }
 
-.wwa section:nth-of-type(1) ol {
+.wwa section:nth-of-type(1) ol  {
 	width: 100%;
 	position: absolute;
-	top: 59%;
-	color: white;
-}
-
-
-section:nth-of-type(1) ol {
+	bottom: 1em;
+	color: #fff;
 	display: flex;
 	overflow: auto;
 	scrollbar-width: none;
@@ -802,7 +807,7 @@ section:nth-of-type(1) ol {
 	scroll-behavior: smooth;
 	overscroll-behavior-x: contain;
 	justify-items: center;
-	gap: 2em;
+	gap: 3em;
 }
 
 
@@ -813,8 +818,8 @@ section:nth-of-type(1) ol li {
 	padding-left: 0;
 }
 
-section:nth-of-type(1) ol li a {
-	color: white;
+section:nth-of-type(1) ol li {
+	color: #fff;
 	font-family: 'RiotSans';
     letter-spacing: -.03em;
     font-size: 20px;
@@ -823,24 +828,12 @@ section:nth-of-type(1) ol li a {
 
 }
 
+/* Articles van eerste section*/
+
 section:nth-of-type(2) div {
-	background-color: var(--color-background-black);
+	background-color: var(--color-wwa-carousel);
 	min-height: 330px;
 }
-
-
-.carousel-article {
-	display: none;
-}
-
-.carousel-article.active {
-	display: block;
-}
-
-.carousel-menu li.active a{
-	text-decoration: underline red;
-}
-
 
 
 section:nth-of-type(2) ul {
@@ -851,11 +844,9 @@ section:nth-of-type(2) ul {
 	scroll-behavior: smooth;
 	overscroll-behavior-x: contain;
 	flex-direction: row;
-	padding-top: 3em;
 	scroll-marker-group: after;
 }
 
-/* asdfsafsd */
 section:nth-of-type(2) ul::scroll-marker-group {
 	display: flex;
 	justify-content: start;
@@ -883,7 +874,7 @@ section:nth-of-type(2) ul li {
 	flex-shrink: 0;
 	padding-left: 2em;
 	gap: 1em;
-	color: white;
+	color: var(--tekst-color-2);
 	scroll-snap-align: center;
 	padding-right: 2em;
 }
@@ -905,39 +896,64 @@ section:nth-of-type(2) ul li p {
 	padding: 0;
 }
 
+.carousel-article {
+	display: none;
+}
 
-div:nth-of-type(1) span{
+.carousel-article.active {
+	display: block;
+}
+
+.carousel-menu li.active{
+	text-decoration: underline red;
+}
+
+/* We are Riot video/section */
+
+main > div {
+	background-color: #e7e6e3;
+}
+
+main > div span{
 	display: flex;
 	padding: 0;
-
 }
 
-div:nth-of-type(1) h3 {
-	color: black;
+main > div h3 {
+	color: #0a0a0a;
+	font-family: var(--font-RiotSans);
+    font-size: 34px;
+    padding: 1em 0;
+	text-align: left;
+	margin-left: 1.25rem;
 }
 
-div:nth-of-type(1) iframe {
+main > div p {
+	padding: 0 1.25rem 3rem 1.25rem;
+	font-family: var(--font-InterRegular);
+	letter-spacing: -.03em;
+	color: #0a0a0a;
+	line-height: 1.5;
+}
+
+main > div iframe {
 	position: relative;
-    width: 80%;
+    width: 100%;
     height: 250px;
     padding-top: 50px;
     overflow: hidden;
-    margin: 0 auto;
+	margin: 0 1.25rem;
+	border: none;
 }
 
-
+/* Details over games */
 
 details {
-	/* margin: 1rem 0; */
-	background-color: var(--main-darkgray);
+	background-color: var(--bg-details);
 	color: #fff;
 	overflow: hidden;
 }
 
-
-details * {
-	margin: 0;
-}
 
 details div {
 	display: flex;
@@ -957,11 +973,9 @@ details div p {
 	letter-spacing: -.03em;
 	line-height: 1.2;
 	text-align: center;
-	color: #e7e6e3;
+	color: var(--tekst-color-2);
 	max-width: 380px;
 	font-family: 'InterRegular', Arial, sans-serif;
-
-
 }
 
 details div a {
@@ -986,11 +1000,6 @@ summary {
 
 details[open] summary img:nth-child(1) {
 	opacity: 1;
-}
-
-
-summary::marker {
-	content: "";
 }
 
 
@@ -1023,6 +1032,7 @@ summary p {
 	z-index: 2;
 	transition: opacity 0.5s ease;
 	font-family: 'RiotSans';
+	color: var(--tekst-color-2);
 }
 
 details[open] summary p {
@@ -1044,7 +1054,8 @@ summary::after {
 	right: 1rem;
 	bottom: 2rem;
 	font-size: 1.35rem;
-	border: 1px solid white;
+	border: 1px solid var(--tekst-color-2);
+	color: var(--tekst-color-2);
 	border-radius: 50%;
 	text-align: center;
 	width: 30px;
@@ -1060,14 +1071,16 @@ details[open] div {
 	max-height: 100%;
 }
 
+/* Commitment section */
+
 .commitment {
 	margin-top: -4em;
 	padding: 3em 0;
-	background-color: white;
+	background-color: #0a0a0a;
 }
 
 .commitment h3 {
-	color: black;
+	color: #0a0a0a;
 	padding-bottom: 1em;
     letter-spacing: -.03em;
     font-size: 1.5em;
@@ -1092,7 +1105,6 @@ details[open] div {
 	padding: 1.5em;
 	gap: .5em;
 }
-
  
 .commitment ul li::scroll-marker {
 	content: '';
@@ -1119,7 +1131,7 @@ details[open] div {
 }
 
 .commitment li h4 {
-	color: black;
+	color: #0a0a0a;
 	font-family: 'RiotSans';
     letter-spacing: -.03em;
     margin-left: 20%;
@@ -1147,15 +1159,6 @@ details[open] div {
 	padding-bottom: 24px;
 }
 
-/* .commitment li figure img {
 
-} */
-
-
-p,
-a {
-	padding: 1rem;
-	display: block;
-}
 
 

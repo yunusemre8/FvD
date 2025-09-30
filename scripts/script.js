@@ -1,32 +1,3 @@
-// JavaScript Document
-
-// const menuButton = document.querySelector("header button");
-// const nav = document.querySelector("nav");
-// menuButton.addEventListener("click", openMenu)
-
-// function openMenu(){
-//   nav.classList.add("toonMenu")
-// }
-
-// const sluitButton = document.querySelector("nav button");
-// sluitButton.addEventListener("click", sluitMenu)
-
-// function sluitMenu(){
-// const nav = document.querySelector("nav");
-  
-//   nav.classList.remove("toonMenu")
-// }
-
-// chatgpt
-// window.addEventListener("scroll", function () {
-//     const header = document.querySelector("header");
-//     if (window.scrollY > 50) {
-//       header.classList.add("scrolled");
-//     } else {
-//       header.classList.remove("scrolled");
-//     }
-//   });
-//   chatgpt
 
 // Select elements
 const menuButton = document.getElementById("menuButton");
@@ -57,41 +28,39 @@ window.addEventListener("scroll", () => {
 
 // wwa carousel in carousel
 
+const menuItems = document.querySelectorAll('.carousel-menu li');
+const contents = document.querySelectorAll('.carousel-article');
 
+menuItems.forEach((item, index) => {
+  item.addEventListener('click', (a) => {
+    a.preventDefault();
 
-  const menuItems = document.querySelectorAll('.carousel-menu li');
-  const contents = document.querySelectorAll('.carousel-article');
+    // 1) Tüm içerikleri ve menüleri pasifleştir
+    contents.forEach(content => content.classList.remove('active'));
+    menuItems.forEach(m => m.classList.remove('active'));
 
-  menuItems.forEach((item, index) => {
-    item.addEventListener('click', (e) => {
-      e.preventDefault(); 
+    const activeContent = contents[index];
 
-      const activeContent = contents[index];
-      activeContent.classList.add('active');
-      item.classList.add('active');
-  
-      activeContent.scrollTop = 0;
-
-      contents.forEach(content => content.classList.remove('active'));
-      menuItems.forEach(m => m.classList.remove('active'));
-
-
-
-      contents[index].classList.add('active');
-      item.classList.add('active');
-    });
+    activeContent.classList.add('active');
+    item.classList.add('active');
   });
+});
 
+// light/dark mode Met behulp van ChatGPT
+// Link: https://chatgpt.com/share/68dba57a-2cf8-8005-9829-376821b136bb
 
+const themeToggle = document.querySelector('.theme-toggle');
 
-  // const menuToggle = document.querySelector('.menu-toggle');
-  // const menuClose = document.querySelector('.menu-close');
-  // const mobileMenu = document.querySelector('.mobile-menu');
+themeToggle.addEventListener('click', () => {
+  document.body.classList.toggle('light');
 
-  // menuToggle.addEventListener('click', () => {
-  //   mobileMenu.classList.add('active');
-  // });
+  if (document.body.classList.contains('light')) {
+    localStorage.setItem('theme', 'light');
+  } else {
+    localStorage.setItem('theme', 'dark');
+  }
+});
 
-  // menuClose.addEventListener('click', () => {
-  //   mobileMenu.classList.remove('active');
-  // });
+if (localStorage.getItem('theme') === 'dark') {
+  document.body.classList.add('dark');
+}

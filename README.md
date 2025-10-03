@@ -58,7 +58,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Bevindingen
   Lijst met je bevindingen die in de test naar voren kwamen:
-
+  De webstie ziet er goed uit en is wel toegankelijk voor de screenreaders. Wat mij opvalt is dat sommige afbeeldingen niet geschikt zijn voor screenreaders vanwege het ontbreken van alt attributen. En toegankelijkheid voor de high contrast, grootte van de teksten en kleur thema ontbreekt nog.
 </details>
 
 
@@ -158,6 +158,17 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Bevindingen
   Lijst met je bevindingen die in de test naar voren kwamen (geef ook aan wat er verbeterd is):
+
+  Algemene dingen zijn wel geschikt voor de screenreaders inclusief alt attributen van images. Buttons en a links zijn goed gebruikt. Alleen op een paar plekken heb ik onjuist gebruikt. Voor de achtergrond videos was het niet goed bijgewerkt om de autoplay te laten stoppen.
+
+  Wat verbeterd is dat er een dark/light mode beschikbaar is met een simpele button. Meer semantische elementen worden gebruikt in plaats van overal div's. 
+
+  <img src="readme-images/WCAG_1.jpeg" width="375px" alt="WCAG Checklist pagina 1">
+  <img src="readme-images/WCAG_2.jpeg" width="375px" alt="WCAG Checklist pagina 2">
+  <img src="readme-images/WCAG_3.jpeg" width="375px" alt="WCAG Checklist pagina 3">
+  <img src="readme-images/WCAG_4.jpeg" width="375px" alt="WCAG Checklist pagina 4">
+  <img src="readme-images/WCAG_5.jpeg" width="375px" alt="WCAG Checklist pagina 5">
+
 
 </details>
 
